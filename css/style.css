@@ -8,8 +8,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 810px;
+    /* height: 810px; */
     background-color: honeydew;
+    margin-top: 250px;
 }
 
 .container {
