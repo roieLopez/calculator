@@ -1,5 +1,5 @@
-let hourPay = document.querySelector('.hourPay');
-let payDay = document.querySelector('.payDay');
+let hourWage = document.querySelector('.hourWage'); // hourPay
+let hoursDay = document.querySelector('.hoursDay'); // payDay
 let days = document.querySelector('.days');
 let btn = document.querySelector('.btn');
 let message2 = document.querySelector('.message2');
@@ -12,187 +12,185 @@ let pay35 = 41910;
 let pay47 = 53970;
 let pay50 = 53971;
 
-// console.log(hourPay);
-// console.log(payDay);
-// console.log(days);
-// console.log(btn);
-// console.log(message);
-
-
-
 btn.addEventListener('click', function () {
-    let sum = hourPay.value * payDay.value * days.value;
-    if (sum <= pay10) {
-        let x = sum * 0.10;
-        let y = sum * 0.035;
-        let r = sum - x - y; 
-        
-        message2.innerHTML = `
+    let sum = hourWage.value * hoursDay.value * days.value;
+    if ((hourWage.value = hourWage.value) && (hoursDay.value = hoursDay.value) && (days.value = days.value)) {
+        if (sum <= pay10) {
+            let x = sum * 0.10;
+            let y = sum * 0.035;
+            let r = sum - x - y;
 
-        <div>  שכר ברוטו :
-         ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-         </div>
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             </div>
+    
+            <div class="result"> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+             </div> 
+    
+    
+             <div class="result"> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+              </div> 
+    
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             </div>`;
+            return
+        }
 
-        <div class="result"> 
-        מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-         </div> 
+        if (sum <= pay14) {
+            let x = sum * 0.14;
+            let y = sum * 0.035;
+            let r = sum - x - y;
 
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             </div>
+    
+            <div class="result"> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+             </div> 
+    
+    
+             <div class="result"> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+              </div> 
+    
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             </div>`;
+            return
+        }
+        if (sum <= pay31) {
+            let x = sum * 0.31;
+            let y = sum * 0.035;
+            let r = sum - x - y;
 
-         <div class="result"> 
-         ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-          </div> 
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             </div>
+    
+            <div class="result"> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+             </div> 
+    
+    
+             <div class="result"> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+              </div> 
+    
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             </div>`;
+            return
+        }
+        if (sum <= pay35) {
+            let x = sum * 0.35;
+            let y = sum * 0.035;
+            let r = sum - x - y;
 
-         <div>
-         שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-         </div>`;
-        return
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             </div>
+    
+            <div class="result"> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+             </div> 
+    
+    
+             <div class="result"> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+              </div> 
+    
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             </div>`;
+            return
+        }
+        if (sum >= 44020) {
+            let x = sum * 0.47;
+            let y = sum * 0.12;
+            let r = sum - x - y;
+
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             </div>
+    
+            <div class="result"> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+             </div> 
+    
+    
+             <div class="result"> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+              </div> 
+    
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             </div>`;
+            return
+        }
+        if (sum <= pay47) {
+            let x = sum * 0.47;
+            let r = sum - x;
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             </div>
+    
+            <div class="result"> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+             </div> 
+    
+    
+             <div class="result"> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+              </div> 
+    
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             </div>`;
+            return
+        }
+        if (sum <= pay50) {
+            let x = sum * 0.50;
+            let r = sum - x;
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             </div>
+    
+            <div class="result"> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+             </div> 
+    
+    
+             <div class="result"> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+              </div> 
+    
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             </div>`;
+            return
+        }
     }
-    if (sum <= pay14) {
-        let x = sum * 0.14;
-        let y = sum * 0.035;
-        let r = sum - x - y; 
-        
-        message2.innerHTML = `
-
-        <div>  שכר ברוטו :
-         ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-         </div>
-
-        <div class="result"> 
-        מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-         </div> 
-
-
-         <div class="result"> 
-         ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-          </div> 
-
-         <div>
-         שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-         </div>`;
-        return
-    }
-    if (sum <= pay31) {
-        let x = sum * 0.31;
-        let y = sum * 0.035;
-        let r = sum - x - y; 
-        
-        message2.innerHTML = `
-
-        <div>  שכר ברוטו :
-         ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-         </div>
-
-        <div class="result"> 
-        מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-         </div> 
-
-
-         <div class="result"> 
-         ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-          </div> 
-
-         <div>
-         שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-         </div>`;
-        return
-    }
-    if (sum <= pay35) {
-        let x = sum * 0.35;
-        let y = sum * 0.035;
-        let r = sum - x - y; 
-        
-        message2.innerHTML = `
-
-        <div>  שכר ברוטו :
-         ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-         </div>
-
-        <div class="result"> 
-        מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-         </div> 
-
-
-         <div class="result"> 
-         ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-          </div> 
-
-         <div>
-         שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-         </div>`;
-        return
-    }
-    if(sum >= 44020){
-        let x = sum * 0.47;
-        let y = sum * 0.12;
-        let r = sum - x - y; 
-        
-        message2.innerHTML = `
-
-        <div>  שכר ברוטו :
-         ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-         </div>
-
-        <div class="result"> 
-        מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-         </div> 
-
-
-         <div class="result"> 
-         ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-          </div> 
-
-         <div>
-         שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-         </div>`;
-        return
-    }
-    if (sum <= pay47) {
-        let x = sum * 0.47;
-        let r = sum - x;
-        message2.innerHTML = `
-
-        <div>  שכר ברוטו :
-         ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-         </div>
-
-        <div class="result"> 
-        מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-         </div> 
-
-
-         <div class="result"> 
-         ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-          </div> 
-
-         <div>
-         שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-         </div>`;
-        return
-    }
-    if (sum <= pay50) {
-        let x = sum * 0.50;
-        let r = sum - x;
-        message2.innerHTML = `
-
-        <div>  שכר ברוטו :
-         ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-         </div>
-
-        <div class="result"> 
-        מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-         </div> 
-
-
-         <div class="result"> 
-         ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-          </div> 
-
-         <div>
-         שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-         </div>`;
-        return
-    }
+    alert(`
+                                         אחד השדות ריק !
+                בכדי להמשיך אנא מלא/י את השדות במלואם!`);
 
 })
 
@@ -225,7 +223,8 @@ btn17.addEventListener('click', function () {
          סכום אחרי מע"מ : ${new Intl.NumberFormat({style: 'decimal'}).format(amountCalc())} &#8362 
          </div>`
     } else {
-        console.log('error')
+        alert(`
+                            הכנס נתונים לשדה בבקשה!`);
     }
 });
 
@@ -241,18 +240,7 @@ btn25.addEventListener('click', function () {
         הון עצמי נדרש : ${new Intl.NumberFormat({style: 'decimal'}).format(calc25())} &#8362
          </div> `
     } else {
-        console.log('error')
+        alert(`
+                           הכנס נתונים לשדה בבקשה!`);
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
