@@ -22,7 +22,9 @@ body {
 
 .container {
     width: 350px;
-    height: 350px;
+    height:auto;
+    padding: 20px;
+    /* min-height: 600px; */
     border: 1px solid gray;
     /* background-color: rgba(128, 128, 128, 0.474); */
     /* background-color: rgba(216, 108, 49, 0.474); */
@@ -74,6 +76,17 @@ button:hover {
     padding-bottom: 15px;
     font-style: normal;
 }
+
+
+.message2 {
+    width: 340px;
+    color: rgba(0, 0, 0, 0.46);
+    font-weight: 100;
+    padding-bottom: 15px;
+    font-style: normal;
+    margin-top: 10px;
+}
+
 
 input {
     margin-top: 5px;
