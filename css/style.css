@@ -20,6 +20,17 @@ body {
     }
   } */
 
+  /* .testclass{
+display:block;
+  } */
+
+.msgerror::before{
+    color: rgba(255, 0, 0, 0.808);
+    font-family: 'Secular One', sans-serif;
+    font-size: 28px;
+    content: "אחד השדות ריק !";
+    
+}
 .container {
     width: 350px;
     height:auto;

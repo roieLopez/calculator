@@ -3,6 +3,7 @@ let hoursDay = document.querySelector('.hoursDay'); // payDay
 let days = document.querySelector('.days');
 let btn = document.querySelector('.btn');
 let message2 = document.querySelector('.message2');
+let msgerror = document.querySelector('.msgerrorContainer');
 
 let pay10 = 6290;
 let pay14 = 9030;
@@ -14,8 +15,12 @@ let pay50 = 53971;
 
 btn.addEventListener('click', function () {
     let sum = hourWage.value * hoursDay.value * days.value;
+   
     if ((hourWage.value = hourWage.value) && (hoursDay.value = hoursDay.value) && (days.value = days.value)) {
+        msgerror.classList.remove("msgerror");
+       
         if (sum <= pay10) {
+           
             let x = sum * 0.10;
             let y = sum * 0.035;
             let r = sum - x - y;
@@ -187,10 +192,18 @@ btn.addEventListener('click', function () {
              </div>`;
             return
         }
+        
+    }else{
+        msgerror.classList.add("msgerror");
+        // <div class="">אחד השדות ריק ! <br />
+        // בכדי להמשיך אנא מלא/י את השדות במלואם!</div>`;
     }
-    alert(`
-                                         אחד השדות ריק !
-                בכדי להמשיך אנא מלא/י את השדות במלואם!`);
+
+   
+
+    // alert(`
+    //                                      אחד השדות ריק !
+    //             בכדי להמשיך אנא מלא/י את השדות במלואם!`);
 
 })
 
@@ -209,6 +222,7 @@ let amountCalc = () => calc17() + Number(input.value);
 
 btn17.addEventListener('click', function () {
     if (input.value = input.value) {
+        msgerror.classList.remove("msgerror");
         message.innerHTML = `
 
         <div>  סכום לפני מע"מ :
@@ -223,13 +237,15 @@ btn17.addEventListener('click', function () {
          סכום אחרי מע"מ : ${new Intl.NumberFormat({style: 'decimal'}).format(amountCalc())} &#8362 
          </div>`
     } else {
-        alert(`
-                            הכנס נתונים לשדה בבקשה!`);
+        msgerror.classList.add("msgerror");
+        // alert(`
+        //                     הכנס נתונים לשדה בבקשה!`);
     }
 });
 
 btn25.addEventListener('click', function () {
     if (input.value = input.value) {
+        msgerror.classList.remove("msgerror");
         message.innerHTML = `
     
         <div> 
@@ -240,7 +256,6 @@ btn25.addEventListener('click', function () {
         הון עצמי נדרש : ${new Intl.NumberFormat({style: 'decimal'}).format(calc25())} &#8362
          </div> `
     } else {
-        alert(`
-                           הכנס נתונים לשדה בבקשה!`);
+        msgerror.classList.add("msgerror");
     }
 });
