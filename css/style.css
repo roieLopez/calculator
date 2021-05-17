@@ -23,7 +23,7 @@ body {
         width: 250px !important;
     }
     button{
-        width: 190px !important;
+        width: 210px !important;
     }
   }
 
@@ -36,7 +36,7 @@ display:block;
     font-family: 'Secular One', sans-serif;
     font-size: 28px;
     content: "אחד השדות ריק !";
-    
+    /* content: "אנא מלא/י את כל השדות !";     */
 }
 .container {
     width: 350px;

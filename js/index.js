@@ -1,9 +1,15 @@
 let hourWage = document.querySelector('.hourWage'); // hourPay
 let hoursDay = document.querySelector('.hoursDay'); // payDay
 let days = document.querySelector('.days');
+let points = document.querySelector('.points');
 let btn = document.querySelector('.btn');
 let message2 = document.querySelector('.message2');
 let msgerror = document.querySelector('.msgerrorContainer');
+
+
+// console.log(aa);
+
+
 
 let pay10 = 6290;
 let pay14 = 9030;
@@ -14,42 +20,168 @@ let pay47 = 53970;
 let pay50 = 53971;
 
 btn.addEventListener('click', function () {
-    let sum = hourWage.value * hoursDay.value * days.value;
+    let total = hourWage.value * hoursDay.value * days.value; // sum = total
    
     if ((hourWage.value = hourWage.value) && (hoursDay.value = hoursDay.value) && (days.value = days.value)) {
         msgerror.classList.remove("msgerror");
        
-        if (sum <= pay10) {
-           
-            let x = sum * 0.10;
-            let y = sum * 0.035;
-            let r = sum - x - y;
-
+        if (total <= pay10) {
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.10; // x = national insurance
+            let incomeTax = total * 0.035; // y = Income Tax
+            let result = total - nationalInsurance - incomeTax + totalPricePoints; // r = result 
+            
             message2.innerHTML = `
     
             <div>  שכר ברוטו :
-             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
+             ${new Intl.NumberFormat({style: 'decimal'}).format(total)} &#8362 
              </div>
     
-            <div class="result"> 
-            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
+            <div> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(nationalInsurance)} &#8362
              </div> 
     
     
-             <div class="result"> 
-             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
+             <div> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(incomeTax)} &#8362
               </div> 
     
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
+
              <div>
-             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
              </div>`;
             return
         }
 
-        if (sum <= pay14) {
-            let x = sum * 0.14;
-            let y = sum * 0.035;
-            let r = sum - x - y;
+        if (total <= pay14) {
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.14; // x = national insurance
+            let incomeTax = total * 0.035; // y = Income Tax
+            let result = total - nationalInsurance - incomeTax + totalPricePoints; // r = result 
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(total)} &#8362 
+             </div>
+    
+            <div> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(nationalInsurance)} &#8362
+             </div> 
+    
+    
+             <div> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(incomeTax)} &#8362
+              </div> 
+    
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
+
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
+             </div>`;
+            return
+        }
+        if (total <= pay20) {
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.20; // x = national insurance
+            let incomeTax = total * 0.035; // y = Income Tax
+            let result = total - nationalInsurance - incomeTax + totalPricePoints; // r = result 
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(total)} &#8362 
+             </div>
+    
+            <div> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(nationalInsurance)} &#8362
+             </div> 
+    
+    
+             <div> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(incomeTax)} &#8362
+              </div> 
+    
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
+
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
+             </div>`;
+            return
+        }
+        if (total <= pay31) {
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.31;
+            let incomeTax = total * 0.035; 
+            let result = total - nationalInsurance - incomeTax + totalPricePoints;  
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(total)} &#8362 
+             </div>
+    
+            <div> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(nationalInsurance)} &#8362
+             </div> 
+    
+    
+             <div> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(incomeTax)} &#8362
+              </div> 
+    
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
+
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
+             </div>`;
+            return
+        }
+        if (total <= pay35) {
+
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.35;
+            let incomeTax = total * 0.035; 
+            let result = total - nationalInsurance - incomeTax + totalPricePoints;  
+            message2.innerHTML = `
+    
+            <div>  שכר ברוטו :
+             ${new Intl.NumberFormat({style: 'decimal'}).format(total)} &#8362 
+             </div>
+    
+            <div> 
+            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(nationalInsurance)} &#8362
+             </div> 
+    
+    
+             <div> 
+             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(incomeTax)} &#8362
+              </div> 
+    
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
+
+             <div>
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
+             </div>`;
+            return
+        }
+
+
+        ////////////////////////
+        if (total >= 44020) {
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.47;
+            let incomeTax = total * 0.12;
+            let result = total - nationalInsurance - incomeTax;
+
 
             message2.innerHTML = `
     
@@ -57,24 +189,30 @@ btn.addEventListener('click', function () {
              ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
              </div>
     
-            <div class="result"> 
+            <div> 
             מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
              </div> 
     
     
-             <div class="result"> 
+             <div> 
              ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
               </div> 
     
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
+
              <div>
-             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
              </div>`;
             return
         }
-        if (sum <= pay31) {
-            let x = sum * 0.31;
-            let y = sum * 0.035;
-            let r = sum - x - y;
+        if (total <= pay47) {
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.47;
+            let incomeTax = total * 0.12;
+            let result = total - nationalInsurance - incomeTax;
+
 
             message2.innerHTML = `
     
@@ -82,113 +220,52 @@ btn.addEventListener('click', function () {
              ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
              </div>
     
-            <div class="result"> 
+            <div> 
             מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
              </div> 
     
     
-             <div class="result"> 
+             <div> 
              ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
               </div> 
     
-             <div>
-             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-             </div>`;
-            return
-        }
-        if (sum <= pay35) {
-            let x = sum * 0.35;
-            let y = sum * 0.035;
-            let r = sum - x - y;
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
 
-            message2.innerHTML = `
-    
-            <div>  שכר ברוטו :
-             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-             </div>
-    
-            <div class="result"> 
-            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-             </div> 
-    
-    
-             <div class="result"> 
-             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-              </div> 
-    
              <div>
-             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-             </div>`;
-            return
-        }
-        if (sum >= 44020) {
-            let x = sum * 0.47;
-            let y = sum * 0.12;
-            let r = sum - x - y;
-
-            message2.innerHTML = `
-    
-            <div>  שכר ברוטו :
-             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-             </div>
-    
-            <div class="result"> 
-            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-             </div> 
-    
-    
-             <div class="result"> 
-             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-              </div> 
-    
-             <div>
-             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
-             </div>`;
-            return
-        }
-        if (sum <= pay47) {
-            let x = sum * 0.47;
-            let r = sum - x;
-            message2.innerHTML = `
-    
-            <div>  שכר ברוטו :
-             ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
-             </div>
-    
-            <div class="result"> 
-            מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
-             </div> 
-    
-    
-             <div class="result"> 
-             ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
-              </div> 
-    
-             <div>
-             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
              </div>`;
             return
         }
         if (sum <= pay50) {
-            let x = sum * 0.50;
-            let r = sum - x;
+            let totalPricePoints = points.value * 218;
+            let nationalInsurance = total * 0.50;
+            let incomeTax = total * 0.12;
+            let result = total - nationalInsurance - incomeTax;
+
+
             message2.innerHTML = `
     
             <div>  שכר ברוטו :
              ${new Intl.NumberFormat({style: 'decimal'}).format(sum)} &#8362 
              </div>
     
-            <div class="result"> 
+            <div> 
             מס הכנסה :  ${new Intl.NumberFormat({style: 'decimal'}).format(x)} &#8362
              </div> 
     
     
-             <div class="result"> 
+             <div> 
              ביטוח לאומי :  ${new Intl.NumberFormat({style: 'decimal'}).format(y)} &#8362
               </div> 
     
+              <div> 
+             נקודות זיכוי :  ${new Intl.NumberFormat({style: 'decimal'}).format(totalPricePoints)} &#8362
+               </div> 
+
              <div>
-             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(r)} &#8362 
+             שכר נטו : ${new Intl.NumberFormat({style: 'decimal'}).format(result)} &#8362 
              </div>`;
             return
         }
